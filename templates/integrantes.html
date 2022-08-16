@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for key in integrantes %}
+    <p>
+        {{key.id}} | {{key.nombre}} | {{key.apellido}} | {{key.edad}}
+    </p>
+{% endfor %}
+</body>
+</html>

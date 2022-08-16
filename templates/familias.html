@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Familias</title>
+</head>
+<body>
+{% for key in familias %}
+    <p>
+        La familia {{key.apellido}} posee {{key.cantidad_integrantes}} integrantes
+    </p>
+{% endfor %}
+</body>
+</html>
