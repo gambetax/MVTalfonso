@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+FAMILIA : {{integrantes.key.apellido.uppercase}}
+
+INTEGRANTES:
+{% for key in integrantes %}
+    <p>
+       {{key.nombre}} | {{key.edad}}
+    </p>
+{% endfor %}
+</body>
+</html>
