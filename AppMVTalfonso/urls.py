@@ -9,5 +9,5 @@ urlpatterns = [
     path('consultarFamilia/<apellido>',consultar_familia),
     path('integrante/<nombre>/<apellido>/<edad>',integrante),
     path('integrantes',integrantes),
-    path('integrantes_por_familia/<apellido>',integrantes_por_familia)
+    path('integrantes_por_familia/<apellido>',integrantes_por_familia) #metodo para consultar integrantes de una determinada familia
 ]

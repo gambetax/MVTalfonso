@@ -37,7 +37,7 @@ def consultar_familia(request,apellido):
         'familia': data,
     }
 
-    return render(request,'consultarFamilia.html',contexto)
+    return render(request,'consultar_familia.html',contexto)
 
 #metodo para consultar todas las familias
 def familias(request):
@@ -72,8 +72,9 @@ def integrantes(request):
 #metodo para consultar integrantes de una determinada familia
 def integrantes_por_familia(request,apellido):
     data = Integrantes.objects.filter(apellido=apellido)
-
+    data_fam = Familia.objects.filter(apellido=apellido).values()
     contexto = {
+        'familia' : data_fam,
         'integrantes' : data
     }
 

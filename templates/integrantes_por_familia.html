@@ -5,12 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-FAMILIA : {{integrantes.key.apellido.uppercase}}
 
-INTEGRANTES:
+<h1>FAMILIA</h1>}
+<br>
+{% for key in familia %}
+    <p>
+    <h2>{{key.apellido|upper}}</h2>
+    </p>
+{% endfor %}
+
+<h2>INTEGRANTES:</h2>
 {% for key in integrantes %}
     <p>
-       {{key.nombre}} | {{key.edad}}
+       {{key.nombre}} | {{key.apellido}} | {{key.edad}}
     </p>
 {% endfor %}
 </body>
