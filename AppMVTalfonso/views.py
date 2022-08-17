@@ -15,13 +15,13 @@ def inicio(request):
 
 #metodo para ingresar una familia a DB
 def familia(request, apellido, cantidad_integrantes):
-    #now = datetime.now()
     fam = Familia(apellido=apellido,cantidad_integrantes=cantidad_integrantes)
     fam.save()
     plantilla = loader.get_template('familia.html')
     contexto = {
         "apellido" : fam.apellido,
-        "cantidad_integrantes" : fam.cantidad_integrantes
+        "cantidad_integrantes" : fam.cantidad_integrantes,
+        "fecha_creación" : fam.fecha_creacion,
     }
 
     documento = plantilla.render(contexto)

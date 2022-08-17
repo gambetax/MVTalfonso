@@ -4,7 +4,7 @@ from django.db import models
 class Familia(models.Model):
     apellido = models.CharField(max_length=40)
     cantidad_integrantes = models.IntegerField()
-    fecha_creacion = models.CharField(max_length=40)
+    fecha_creacion = models.DateTimeField(auto_now=True)
 
 class Integrantes(models.Model):
     nombre = models.CharField(max_length=40)
